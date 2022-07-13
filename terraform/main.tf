@@ -12,3 +12,9 @@ resource "google_cloudbuild_trigger" "deploy" {
 
   filename = "cloudbuild.yaml"
 }
+
+resource "google_project_iam_member" "cloubuild" {
+  project = var.project
+  role    = "roles/run.admin"
+  member  = "serviceAccount:${var.project_num}@cloudbuild.gserviceaccount.com"
+}
