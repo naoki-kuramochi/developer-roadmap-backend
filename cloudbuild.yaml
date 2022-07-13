@@ -16,8 +16,11 @@ steps:
       - 'gcr.io/$PROJECT_ID/$_SERVICE_NAME:$COMMIT_SHA'
       - '--region'
       - '$_REGION'
+      - '--port'
+      - '$_PORT'
 images:
   - 'gcr.io/$PROJECT_ID/$_SERVICE_NAME:$COMMIT_SHA'
 substitutions:
   _SERVICE_NAME: backend-loadmap # default value
   _REGION: asia-northeast1 # default value
+  _PORT: "3000" # default value

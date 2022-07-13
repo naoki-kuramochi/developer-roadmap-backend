@@ -8,6 +8,7 @@ resource "google_cloudbuild_trigger" "deploy" {
   substitutions = {
     _SERVICE_NAME = "backend-loadmap"
     _REGION = var.region
+    _PORT = "3000"
   }
 
   filename = "cloudbuild.yaml"
