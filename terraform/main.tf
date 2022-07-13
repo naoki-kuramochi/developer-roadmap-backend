@@ -13,8 +13,19 @@ resource "google_cloudbuild_trigger" "deploy" {
   filename = "cloudbuild.yaml"
 }
 
-resource "google_project_iam_member" "cloubuild" {
-  project = var.project
-  role    = "roles/run.admin"
-  member  = "serviceAccount:${var.project_num}@cloudbuild.gserviceaccount.com"
+module "projects_iam_bindings" {
+  source  = "terraform-google-modules/iam/google//modules/projects_iam"
+  version = "7.4.1"
+
+  projects = [var.project]
+
+  bindings = {
+    "roles/run.admin" = [
+      "serviceAccount:${var.project_num}@cloudbuild.gserviceaccount.com"
+    ]
+
+    "roles/iam.serviceAccountUser" = [
+      "serviceAccount:${var.project_num}@cloudbuild.gserviceaccount.com"
+    ]
+  }
 }
