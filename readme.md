@@ -30,10 +30,16 @@ Roadmaps are being made interactive and have been moved to website.
 
 Here is the list of available roadmaps with more being actively worked upon.
 
+- [Frontend Roadmap](https://roadmap.sh/frontend)
 - [Backend Roadmap](https://roadmap.sh/backend)
 - [DevOps Roadmap](https://roadmap.sh/devops)
+- [React Roadmap](https://roadmap.sh/react)
+- [Angular Roadmap](https://roadmap.sh/angular)
+- [Android Roadmap](https://roadmap.sh/android)
+- [Python Roadmap](https://roadmap.sh/python)
 - [Go Roadmap](https://roadmap.sh/golang)
 - [Java Roadmap](https://roadmap.sh/java)
+- [DBA Roadmap](https://roadmap.sh/postgresql-dba)
 
 ![](https://i.imgur.com/waxVImv.png)
 
